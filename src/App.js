@@ -1,25 +1,29 @@
-import logo from './logo.svg';
-import './App.css';
+import { Admin, Resource } from 'react-admin';
+import CategoryCreate from './components/category/CategoryCreate';
+import CategoryEdit from './components/category/CategoryEdit';
+import CategoryList from './components/category/CategoryList';
+import OrderCreate from './components/order/OrderCreate';
+import OrderEdit from './components/order/OrderEdit';
+import OrderList from './components/order/OrderList';
+import ProductCreate from './components/products/ProductCreate';
+import ProductEdit from './components/products/ProductEdit';
+import ProductList from './components/products/ProductList';
+import authProvider from './utils/authProvider';
+import CustomDataProvider from './utils/CustomDataProvider';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const App = () => (
+    <Admin authProvider={authProvider} dataProvider={CustomDataProvider}>
+        <Resource
+            name="categories"
+            list={CategoryList}
+            create={CategoryCreate}
+            edit={CategoryEdit}
+        />
+
+        <Resource name="products" list={ProductList} create={ProductCreate} edit={ProductEdit} />
+
+        <Resource name="orders" list={OrderList} create={OrderCreate} edit={OrderEdit} />
+    </Admin>
+);
 
 export default App;
