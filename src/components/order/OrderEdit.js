@@ -8,6 +8,7 @@ const OrderEdit = (props) => (
             <TextInput source="name" />
             <TextInput source="email" />
             <TextInput source="mobile" />
+            <TextInput source="paymentMethod" />
             <TextInput source="address" />
             <ArrayInput source="cartProducts">
                 <SimpleFormIterator>

@@ -1,5 +1,12 @@
 /* eslint-disable react/jsx-props-no-spreading */
-import { Edit, ImageField, ImageInput, SimpleForm, TextInput } from 'react-admin';
+import {
+    Edit,
+    ImageField,
+    ImageInput,
+    SimpleForm,
+    // eslint-disable-next-line prettier/prettier
+    TextInput
+} from 'react-admin';
 
 const PreviewImage = ({ record, source }) => {
     if (typeof record === 'string') {
@@ -25,7 +32,7 @@ const ProductEdit = (props) => (
             {/* <ReferenceInput label="Category" source="id" reference="categories">
                 <SelectInput optionText="title" />
             </ReferenceInput> */}
-            <TextInput source="subCategory" />
+            <TextInput label="Sub Category (optional)" source="subCategory" />
             {/* <ReferenceInput label="Sub Category" source="subCategories" reference="categories">
                 <SelectInput optionText="0" />
             </ReferenceInput> */}

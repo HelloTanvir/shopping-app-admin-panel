@@ -56,7 +56,9 @@ const OrderList = (props) => {
                 <TextField source="name" />
                 <TextField source="email" />
                 <TextField source="mobile" />
+                <TextField source="paymentMethod" />
                 <TextField source="address" />
+                <TextField source="createdAt" />
                 <CustomArrayField source="cartProducts" />
                 <EditButton basePath="/orders" />
                 <DeleteButton basePath="/orders" />

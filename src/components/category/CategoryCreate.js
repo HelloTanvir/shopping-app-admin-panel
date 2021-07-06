@@ -5,7 +5,7 @@ const CategoryCreate = (props) => (
     <Create title="Create a category" {...props}>
         <SimpleForm>
             <TextInput source="title" />
-            <ArrayInput source="subCategories">
+            <ArrayInput label="Sub Categories (optional)" source="subCategories">
                 <SimpleFormIterator>
                     <TextInput />
                 </SimpleFormIterator>

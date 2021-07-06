@@ -21,11 +21,6 @@ const PreviewImage = ({ record, source }) => {
 const ProductCreate = (props) => (
     <Create title="Create a product" {...props}>
         <SimpleForm>
-            {/* <ImageInput
-                source="image"
-                label="Product Image"
-                accept="image/png, image/jpg, image/jpeg"
-            /> */}
             <ImageInput source="image">
                 <PreviewImage source="src" />
             </ImageInput>
@@ -33,7 +28,10 @@ const ProductCreate = (props) => (
             <TextInput source="price" />
             <TextInput source="quantity" />
             <TextInput source="category" />
-            <TextInput source="subCategory" />
+            {/* <ReferenceInput label="Category" source="category" reference="categories">
+                <SelectInput optionText="title" />
+            </ReferenceInput> */}
+            <TextInput label="Sub Category (optional)" source="subCategory" />
         </SimpleForm>
     </Create>
 );
